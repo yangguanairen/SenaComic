@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comic_search_result"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/comic_cover_image"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_marginRight="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/comic_title"
+        android:text="12321323"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/comic_cover_image"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/comic_nickname"
+        android:text="fhskfhkj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/comic_cover_image"
+        android:layout_below="@+id/comic_title"
+        android:layout_marginTop="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/comic_tags"
+        android:text="fsdhkhkgjhkjsfhgjk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/comic_cover_image"
+        android:layout_below="@+id/comic_nickname"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/is_ending"
+        android:text="fsdfsdfd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/comic_title"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+
+
+</RelativeLayout>

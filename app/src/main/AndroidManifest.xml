@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sena.senacomic">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="orientation"
+        android:icon="@mipmap/icon_sena"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Temp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".guide.GuideActivity"></activity>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".favorite.FavoriteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".history.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".mangabz.view.MangabzSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mangabz.view.MangabzViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mangabz.view.MangabzInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mangabz.view.MangabzListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dmzj.view.DMZJSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dmzj.view.DMZJViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dmzj.view.DMZJInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dmzj.view.DMZJClassifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kuaikanmanhua.view.KuaiKanSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kuaikanmanhua.view.KuaiKanComicListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kuaikanmanhua.view.KuaiKanBrowserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kuaikanmanhua.view.KuaiKanAllChapterActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

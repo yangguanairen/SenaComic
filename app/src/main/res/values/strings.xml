@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">星漫</string>
+
+    <!--************************快看漫画************************-->
+    <string name="kuai_kan_chapter_counts">已更新%d话</string>
+    <!--************************快看漫画************************-->
+
+
+    <!--************************动漫之家************************-->
+    <string name="dmzj_classify_id">%1$s-%2$s-%3$s-%4$s-%5$s-%6$d</string>
+    <string name="dmzj_info_url">https://m.dmzj.com/info/%s.html</string>
+    <string name="dmzj_search_url">https://m.dmzj.com/search/%s.html</string>
+
+    <string name="dmzj_comic_cover_url">https://images.dmzj.com/%s</string>
+    <string name="dmzj_comic_image_url">https://m.dmzj.com/view/%1$s/%2$s.html</string>
+    <!--************************动漫之家************************-->
+
+    <!--************************Mangabz************************-->
+    <string name="mangabz_list_id">-%1$s-%2$s-%3$s</string>
+    <string name="mangabz_info_url">https://www.mangabz.com/%s/</string>
+    <string name="mangabz_view_url">https://www.mangabz.com/%s/</string>
+    <string name="mangabz_search_url">https://www.mangabz.com/search?title=%s</string>
+    <string name="mangabz_comic_image_url">http://image.mangabz.com/%1$s/%2$s/%3$s/%4$s.jpg</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--************************Mangabz************************-->
+
+
+    <string name="realm_id">%1$d_%2$s</string>
+
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".history.HistoryActivity">
+
+    <com.sena.senacomic.customize.HistoryToolbar
+        android:id="@+id/toolbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/sena_blue"
+        app:searchViewHint="请输入漫画名称"
+        android:contentDescription="0"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_search" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:text="没有历史记录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar_search"/>
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/edit_delete"
+            android:text="删除"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fd113a"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dp_40"
+            android:background="#cccccc"/>
+
+        <TextView
+            android:id="@+id/edit_all_select"
+            android:text="全选"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:contentDescription="all"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/flag_tv"
+        android:text="flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dmzj.fragment.DMZJClassifyFragment">
+
+    <LinearLayout
+        android:id="@+id/sort"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/theme_linear"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/theme"
+                android:text="题材"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="0" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/unfold" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/sena_gray"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/readership_linear"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/readership"
+                android:text="读者群"
+                android:contentDescription="0"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/unfold" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/sena_gray"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/schedule_linear"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/schedule"
+                android:text="进度"
+                android:contentDescription="0"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/unfold" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/sena_gray"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/area_linear"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/area"
+                android:text="地域"
+                android:contentDescription="0"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/unfold" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/sena_gray"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/other_linear"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/other"
+                android:text="人气"
+                android:contentDescription="0"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/unfold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_comic_classify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/sort"/>
+
+
+    <!--    题材展开项目-->
+    <LinearLayout
+        android:id="@+id/theme_sort"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/sort"
+        android:layout_marginTop="@dimen/dp_10">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/theme_all"
+                android:text="全部"
+                android:contentDescription="0"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_adventure"
+                android:text="冒险"
+                android:contentDescription="1"
+                style="@style/dmzj"/>
+            <TextView
+                android:id="@+id/theme_joy"
+                android:text="欢乐向"
+                android:contentDescription="2"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_fighting"
+                android:text="格斗"
+                android:contentDescription="3"
+                style="@style/dmzj" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/theme_science_fiction"
+                android:text="科幻"
+                android:contentDescription="4"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_love"
+                android:text="爱情"
+                android:contentDescription="5"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_sports"
+                android:text="竞技"
+                android:contentDescription="6"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_magic"
+                android:text="魔法"
+                android:contentDescription="7"
+                style="@style/dmzj" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/theme_campus"
+                android:text="校园"
+                android:contentDescription="8"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_suspense"
+                android:text="悬疑"
+                android:contentDescription="9"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_terror"
+                android:text="恐怖"
+                android:contentDescription="10"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_affection"
+                android:text="亲情"
+                android:contentDescription="11"
+                style="@style/dmzj" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/theme_lily"
+                android:text="百合"
+                android:contentDescription="12"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_ranssexuals"
+                android:contentDescription="13"
+                android:text="伪娘"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_tanmei"
+                android:text="耽美"
+                android:contentDescription="14"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_harem"
+                android:text="后宫"
+                android:contentDescription="15"
+                style="@style/dmzj" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/theme_cute"
+                android:text="萌系"
+                android:contentDescription="16"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_cure"
+                android:text="治愈"
+                android:contentDescription="17"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_martial_arts"
+                android:text="武侠"
+                android:contentDescription="18"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/theme_workplace"
+                android:text="职场"
+                android:contentDescription="19"
+                style="@style/dmzj" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+
+            <TextView
+                android:id="@+id/theme_fantasy"
+                android:text="奇幻"
+                android:contentDescription="20"
+                style="@style/dmzj" />
+
+            <TextView
+                android:id="@+id/theme_morality"
+                android:text="节操"
+                android:contentDescription="21"
+                style="@style/dmzj" />
+
+            <TextView
+                android:id="@+id/theme_light_novel"
+                android:text="轻小说"
+                android:contentDescription="22"
+                style="@style/dmzj" />
+
+            <TextView
+                android:id="@+id/theme_funny"
+                android:text="搞笑"
+                android:contentDescription="23"
+                style="@style/dmzj" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/theme_blank"
+            style="@style/dmzj_blank" />
+
+    </LinearLayout>
+
+    <!--    读者群张开项目-->
+    <LinearLayout
+        android:id="@+id/readership_sort"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/sort"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/readership_all"
+                android:text="全部"
+                android:contentDescription="0"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/readership_juvenile"
+                android:text="少年"
+                android:contentDescription="1"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/readership_maiden"
+                android:text="少女"
+                android:contentDescription="2"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/readership_youth"
+                android:text="青年"
+                android:contentDescription="3"
+                style="@style/dmzj" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/readership_blank"
+            style="@style/dmzj_blank"  />
+
+    </LinearLayout>
+
+    <!--    进度展开项目-->
+    <LinearLayout
+        android:id="@+id/schedule_sort"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/sort">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+
+            <TextView
+                android:id="@+id/schedule_all"
+                android:text="全部"
+                android:contentDescription="0"
+                style="@style/dmzj"/>
+            <TextView
+                android:id="@+id/schedule_serialize"
+                android:text="连载"
+                android:contentDescription="1"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/schedule_end"
+                android:text="完结"
+                android:contentDescription="2"
+                style="@style/dmzj" />
+            <TextView style="@style/dmzj" android:background="#f5f5f5"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/schedule_blank"
+            style="@style/dmzj_blank" />
+
+    </LinearLayout>
+
+    <!--    地域展开项目-->
+    <LinearLayout
+        android:id="@+id/area_sort"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/sort"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/area_all"
+                android:text="全部"
+                android:contentDescription="0"
+                style="@style/dmzj"/>
+            <TextView
+                android:id="@+id/area_japan"
+                android:text="日本"
+                android:contentDescription="1"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/area_mainland"
+                android:text="内地"
+                android:contentDescription="2"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/area_occident"
+                android:text="欧美"
+                android:contentDescription="3"
+                style="@style/dmzj" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/area_hkt"
+                android:text="港台"
+                android:contentDescription="4"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/area_korea"
+                android:text="韩国"
+                android:contentDescription="5"
+                style="@style/dmzj" />
+            <TextView
+                android:id="@+id/area_other"
+                android:text="其他"
+                android:contentDescription="6"
+                style="@style/dmzj" />
+            <TextView style="@style/dmzj" android:background="#f5f5f5"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/area_blank"
+            style="@style/dmzj_blank" />
+
+    </LinearLayout>
+
+    <!--    其他展开项目-->
+    <LinearLayout
+        android:id="@+id/other_sort"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/sort">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5">
+            <TextView
+                android:id="@+id/sort_popularity"
+                android:contentDescription="0"
+                android:text="人气"
+                style="@style/dmzj"/>
+            <TextView
+                android:id="@+id/sort_update"
+                android:contentDescription="1"
+                android:text="更新"
+                style="@style/dmzj" />
+            <TextView style="@style/dmzj" android:background="#f5f5f5"/>
+            <TextView style="@style/dmzj" android:background="#f5f5f5"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/other_blank"
+            style="@style/dmzj_blank" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

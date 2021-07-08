@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".guide.GuideActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:text="1.本软件仅用于学习交流使用，在使用过程中出现任何法律责任问题，本人概不负责。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="2.使用过程中出现任何问题或者意见，欢迎致电邮箱188976021@qq.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <TextView
+        android:text="3.漫画源由于服务器接口原因，会出现图片文字加载缓慢，甚至不加载，回退刷新即可。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+</LinearLayout>

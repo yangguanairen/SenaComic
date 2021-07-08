@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/comic_source"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_kuai_kan"
+            android:title="快看漫画" />
+
+        <item
+            android:id="@+id/item_dmzj"
+            android:title="动漫之家" />
+
+        <item
+            android:id="@+id/item_mangabz"
+            android:title="Mangabz" />
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_history"
+            android:title="历史" />
+
+        <item
+            android:id="@+id/item_favorite"
+            android:title="收藏" />
+
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_guide"
+            android:title="使用须知" />
+
+    </group>
+
+
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mangabz.view.MangabzSearchActivity">
+
+    <com.sena.senacomic.customize.HomeToolbar
+        android:id="@+id/customize_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:searchViewHint="请输入搜索内容"
+        app:isShowSearchView="true"
+        android:background="#39adff"
+        app:editTextSearchIcon="@drawable/selector_search_view"
+        app:resourcesIcon="@drawable/logo_mangabz"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

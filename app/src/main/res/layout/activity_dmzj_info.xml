@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dmzj.view.DMZJInfoActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/context"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/comic_cover_image"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+                <TextView
+                    android:id="@+id/comic_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comic_cover_image"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/comic_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comic_cover_image"
+                    android:layout_below="@+id/comic_title"
+                    android:layout_marginTop="@dimen/dp_10" />
+
+                <TextView
+                    android:id="@+id/comic_classify_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comic_cover_image"
+                    android:layout_below="@+id/comic_author"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/comic_classify_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comic_cover_image"
+                    android:layout_below="@+id/comic_classify_1"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/comic_update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comic_cover_image"
+                    android:layout_below="@+id/comic_classify_2"
+                    android:layout_marginTop="5dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/comic_cover_image"
+                    android:layout_below="@id/comic_update_time"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/subscribe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dmzj_favorite_true"
+                        android:padding="5dp"
+                        android:clickable="false"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/continue_read"
+                        android:text="继续阅读"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:padding="5dp"
+                        android:clickable="false"
+                        android:background="@drawable/dmzj_favorite_true"
+                        android:layout_marginLeft="@dimen/dp_10"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/comic_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="4"
+                android:ellipsize="end"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/sena_gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_comic_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"/>
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:text="因版权、国家法规等原因，此漫画暂不提供观看，敬请谅解。"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

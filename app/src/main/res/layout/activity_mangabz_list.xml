@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mangabz.view.MangabzListActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tag_all"
+                android:text="全部"
+                android:contentDescription="0"
+                style="@style/mangabz"
+                android:textColor="#ff4838"/>
+            <TextView
+                android:id="@+id/tag_passionate"
+                android:text="热血"
+                android:contentDescription="31"
+                style="@style/mangabz" />
+            <TextView
+                android:id="@+id/taglove"
+                android:text="恋爱"
+                android:contentDescription="26"
+                style="@style/mangabz" />
+            <TextView
+                android:id="@+id/tag_campus"
+                android:text="校园"
+                android:contentDescription="1"
+                style="@style/mangabz" />
+            <TextView
+                android:id="@+id/tag_adventure"
+                android:text="冒险"
+                android:contentDescription="2"
+                style="@style/mangabz" />
+            <TextView
+                android:id="@+id/tag_science_fiction"
+                android:text="科幻"
+                android:contentDescription="25"
+                style="@style/mangabz" />
+            <TextView
+                android:id="@+id/tag_life"
+                android:text="生活"
+                android:contentDescription="11"
+                style="@style/mangabz" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tag_suspense"
+                android:text="悬疑"
+                android:contentDescription="17"
+                style="@style/mangabz" />
+
+            <TextView
+                android:id="@+id/tag_magic"
+                android:text="魔法"
+                android:contentDescription="15"
+                style="@style/mangabz" />
+
+            <TextView
+                android:id="@+id/tag_sports"
+                android:text="运动"
+                android:contentDescription="34"
+                style="@style/mangabz" />
+
+            <TextView
+                style="@style/mangabz"
+                android:layout_weight="4"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/update_status_all"
+                android:text="全部"
+                android:contentDescription="0"
+                style="@style/mangabz"
+                android:textColor="#ff4838"/>
+            <TextView
+                android:id="@+id/update_status_serializing"
+                android:text="连载中"
+                android:contentDescription="1"
+                style="@style/mangabz" />
+
+            <TextView
+                android:id="@+id/update_status_ending"
+                android:text="完结"
+                android:contentDescription="2"
+                style="@style/mangabz" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sort_popularity"
+                android:text="人气"
+                android:contentDescription="10"
+                style="@style/mangabz"
+                android:textColor="#ff4838"/>
+            <TextView
+                android:id="@+id/sort_update_time"
+                android:text="更新时间"
+                android:contentDescription="2"
+                style="@style/mangabz" />
+            <TextView
+                android:id="@+id/sort_new_arrival"
+                android:text="上架时间"
+                android:contentDescription="18"
+                style="@style/mangabz" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

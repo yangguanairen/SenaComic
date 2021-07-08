@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingTop="5dp"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10">
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/search_view"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:lines="1"/>
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:text="编辑"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentRight="true" />
+
+
+
+</RelativeLayout>

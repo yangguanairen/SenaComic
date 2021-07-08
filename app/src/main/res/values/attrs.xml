@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="MyToolbar">
+<!--        <attr name="rightImageIcon" format="reference" />-->
+        <attr name="editTextSearchIcon" format="reference" />
+        <attr name="isShowSearchView" format="boolean" />
+        <attr name="searchViewHint" format="string" />
+        <attr name="resourcesIcon" format="reference" />
+
+    </declare-styleable>
+
+</resources>
