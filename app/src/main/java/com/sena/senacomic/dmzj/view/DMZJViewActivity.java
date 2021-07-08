@@ -3,6 +3,7 @@ package com.sena.senacomic.dmzj.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -50,6 +51,8 @@ public class DMZJViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDmzjViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        getWindow().setStatusBarColor(Color.parseColor("#39adff"));
 
         comicId = getIntent().getStringExtra(AppConstants.COMIC_ID);
         chapterId = getIntent().getStringExtra(AppConstants.CHAPTER_ID);

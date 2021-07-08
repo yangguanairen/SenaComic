@@ -3,6 +3,7 @@ package com.sena.senacomic.kuaikanmanhua.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -48,6 +49,8 @@ public class KuaiKanBrowserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityKuaiKanBrowserBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        getWindow().setStatusBarColor(Color.parseColor("#39adff"));
 
         nextComicId = getIntent().getStringExtra(AppConstants.CHAPTER_ID);
         retrofitService = RetrofitHelper.getKuaiKanInstance(this).getServer();

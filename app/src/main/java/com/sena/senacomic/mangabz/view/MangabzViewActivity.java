@@ -3,6 +3,8 @@ package com.sena.senacomic.mangabz.view;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.webkit.ValueCallback;
@@ -42,6 +44,8 @@ public class MangabzViewActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         chapterId = getIntent().getStringExtra(AppConstants.CHAPTER_ID);
+
+        getWindow().setStatusBarColor(Color.parseColor("#39adff"));
 //        binding.recyclerViewView.setLayoutManager(new LinearLayoutManager(this));
 //        adapter = new MangabzViewAdapter(this);
 //        binding.recyclerViewView.setAdapter(adapter);

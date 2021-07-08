@@ -166,12 +166,18 @@ public class HistoryActivity extends AppCompatActivity {
                     binding.tvNoData.setVisibility(View.VISIBLE);
                     binding.recyclerViewHistory.setVisibility(View.GONE);
                 } else {
-                    for (String key: positionList) {
-                        RealmHelper.deleteHistory(getApplicationContext(), itemMap.get(key));
-                        adapter.removeAt(Integer.valueOf(key));
-                        // 有时删除后数据不能正确加载，比如删了还会显示。
-                        // 重新设置list数据，虽然会回到顶部，但目前只能这样
-                        adapter.setList(adapter.getData());
+                    if (positionList.size() == adapter.getItemCount()) {
+                        RealmHelper.deleteAllHistory(getApplicationContext());
+                        binding.tvNoData.setVisibility(View.VISIBLE);
+                        binding.recyclerViewHistory.setVisibility(View.GONE);
+                    } else {
+                        for (String key: positionList) {
+                            RealmHelper.deleteHistory(getApplicationContext(), itemMap.get(key));
+                            adapter.removeAt(Integer.valueOf(key));
+                            // 有时删除后数据不能正确加载，比如删了还会显示。
+                            // 重新设置list数据，虽然会回到顶部，但目前只能这样
+                            adapter.setList(adapter.getData());
+                        }
                     }
                 }
                 // 清空待删除列表
