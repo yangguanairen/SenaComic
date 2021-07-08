@@ -1,6 +1,6 @@
 # 简介
 主要爬取快看漫画、动漫之家、Mangabz漫画源的免费漫画   
-apk下载地址: https://wwe.lanzoui.com/irR9Ur5b0mf   
+apk下载地址: https://wwe.lanzoui.com/i374sr5k2pe 
 目前仅支持安卓9及以上运行  
 在使用过程中出现任何问题或者意见，欢迎致电邮箱188976021@qq.com   
 #### 第三方库
